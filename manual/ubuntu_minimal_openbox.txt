@@ -1,0 +1,129 @@
+Ubuntu Minimal Customization
+
+/* OpenBox */
+
+// Basic to start
+sudo apt-get install xorg
+sudo apt-get install openbox
+sudo apt-get install gnome-terminal
+sudo apt-get install gnome-alsamixer
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i sudo dpkg -i google-chrome*.deb
+sudo apt-get install -f
+sudo apt-get install software-properties-common
+startx
+
+// Dock
+sudo add-apt-repository ppa:docky-core/stable
+sudo apt-get update
+sudo apt-get install plank
+
+// Panel
+sudo apt-get install tint2
+
+// Transparency
+sudo apt-get install xcompmgr
+
+// Theme/Icons
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme
+sudo apt-get install numix-icon-theme-circle
+
+// Wallpaper
+sudo apt-get install nitrogen
+
+// Gamming
+sudo apt-get install playonlinux
+sudo apt-get install steam
+
+// Mount/Umount USB Devices
+sudo fdisk -l
+sudo mount /dev/* /media/*
+sudo umount /dev/*
+
+// Install sublime text, skype, etc from usb device
+sudo dpkg -i sublime*.deb skype*.deb
+sudo apt-get install -f
+
+// File Manager
+sudo apt-get install nautilus
+
+// Applications Menu
+sudo apt-get instal synapse
+
+// Terminal Configs
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
+
+// Keyboard Configs
+xmodmap -e "keycode 112 = Home"
+xmodmap -e "keycode 117 = End"
+
+// Auto Start Application
+cd /etc/xdg/openbox
+sudo subl autostart
+[autostart]
+...
+xcompmgr &
+nitrogen --restore &
+plank &
+tint2 &
+synapse
+
+// Set KeyBindings on OpenBox
+mkdir ~/.config/openbox 
+cp -avf /etc/xdg/openbox/rc.xml ~/.config/openbox
+cd ~/.config/openbox
+sudo subl rc.xml
+<keyboard>
+...
+	<!-- Launch Terminal -->
+	<keybind key="C-A-t">
+	  <action name="Execute">
+	    <command>gnome-terminal</command>
+	  </action>
+	</keybind>
+	<!-- Switch Desktop Send -->
+    <keybind key="C-A-S-Left">
+      <action name="SendToDesktopLeft">
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-A-S-Right">
+      <action name="SendToDesktopRight">
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <!-- Window Resize Control -->
+    <keybind key="W-Up">
+      <action name="Maximize"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>960</width>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>960</x>
+        <y>960</y>
+        <width>960</width>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize"/>
+    </keybind>
+...
+</keyboard>
+<mouse>
+...
+</mouse>
+
+/* Gala */
