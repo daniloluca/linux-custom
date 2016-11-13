@@ -1,0 +1,52 @@
+/* Elementary OS Customization */
+
+# Modify Shortcuts
+Unmaximize = Super + Down
+Tile Left = Super + Left
+Tile Right = Super + Right
+Show Workspace Switcher = Super + S
+Switch to left = Super + Ctrl + Left
+Switch to right = Super + Ctrl + Right
+Terminal = Ctrl + Alt + T
+Switch layout: Alt + Space
+
+# Commands
+sudo apt-get update
+sudo apt-get install software-properties-common
+
+# Tweak Tool
+sudo add-apt-repository ppa:philip.scott/elementary-tweaks
+sudo apt update
+sudo apt install elementary-tweaks
+
+# Theme/Icons/Cursor
+sudo add-apt-repository ppa:snwh/pulp
+sudo apt-get update
+sudo apt-get install paper-icon-theme
+sudo apt-get install paper-gtk-theme
+sudo apt-get install paper-cursor-theme
+
+# Tweaks
+Prefer dark variant = true
+Layout = OS X
+Single click = false
+Theme = Paper
+Icons = Paper
+Cursor = Paper
+Unsafe paste alert = false
+
+# Applications
+dpkg -i google*.deb sublimetext*.deb skype*.deb
+sudo apt-get install -f
+
+# Gamming
+sudo apt-get install playonlinux
+sudo apt-get install steam
+
+# Development
+sudo apt-get install git
+sudo apt-get install npm
+ln -s /usr/bin/nodejs /usr/bin/node
+
+
+
