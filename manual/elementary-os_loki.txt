@@ -9,6 +9,8 @@ Switch to left = Super + Ctrl + Left
 Switch to right = Super + Ctrl + Right
 Terminal = Ctrl + Alt + T
 Switch layout: Alt + Space
+Custom
+	gnome-system-monitor = Ctrl + Shift + Esc
 
 # Commands
 sudo apt-get update
