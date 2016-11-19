@@ -1,0 +1,14 @@
+steam
+  limbo
+playonlinux
+  league of legends
+gimp
+skype
+atom
+virtualbox
+gnome-system-monitor
+software-properties-gtk
+update-manager
+only office
+git
+node
