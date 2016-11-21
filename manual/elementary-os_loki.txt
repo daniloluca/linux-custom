@@ -37,16 +37,17 @@ cd plank-themes
 ./install.sh
 
 # Tweaks
+GTK+ = Paper
+Icons = Paper
+Cursor = Paper
 Prefer dark variant = true
 Layout = OS X
 Single click = false
-Theme = Paper
-Icons = Paper
-Cursor = Paper
 Unsafe paste alert = false
 
 # Applications
-dpkg -i google*.deb sublimetext*.deb skype*.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
 
 # Gamming
@@ -59,7 +60,7 @@ sudo apt-get install npm
 ln -s /usr/bin/nodejs /usr/bin/node
 
 # Updates
-sudo apt-get install software-properties-gtk 
+sudo apt-get install software-properties-gtk
 sudo apt-get install update-manager
 
 # Virtualization
