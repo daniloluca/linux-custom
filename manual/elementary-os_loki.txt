@@ -68,3 +68,17 @@ sudo apt-get install virtualbox
 
 # Monitoring
 sudo apt-get install gnome-system-monitor
+
+# Indicators
+sudo add-apt-repository ppa:caffeine-developers/ppa
+sudo apt-get update
+sudo apt-get install caffeine
+
+# Utility
+sudo apt-get install gnome-disk-utility
+
+# Startup
+caffeine-indicator
+
+### Configuration ###
+Make storages mount on start on disks app
