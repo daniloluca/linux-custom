@@ -82,3 +82,4 @@ caffeine-indicator
 
 ### Configuration ###
 Make storages mount on start on disks app
+PlayonLinux's games configuration is up to you
