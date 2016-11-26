@@ -71,14 +71,17 @@ sudo apt-get install gnome-system-monitor
 
 # Indicators
 sudo add-apt-repository ppa:caffeine-developers/ppa
+sudo add-apt-repository ppa:yunnxx/gnome3
 sudo apt-get update
 sudo apt-get install caffeine
+sudo apt-get install indicator-usb
 
 # Utility
 sudo apt-get install gnome-disk-utility
 
 # Startup
 caffeine-indicator
+indicator-usb
 
 ### Configuration ###
 Make storages mount on start on disks app
