@@ -58,6 +58,7 @@ sudo apt-get install caffeine
 
 # Tweaks
 set Zuki Themes
+Global Dark Theme = true
 
 # Extensions
 Alternatetab
