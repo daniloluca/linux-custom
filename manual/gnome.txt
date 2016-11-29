@@ -70,9 +70,13 @@ Dash to Dock
     Pressure threshold = 0
 TopIcons Plus
 
-
 # Startup
 caffeine-indicator
+
+# Commands
+## Make tab auto completion case insensitive on terminal
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
 
 ### Configuration ###
 Make storages mount on start on disks app
