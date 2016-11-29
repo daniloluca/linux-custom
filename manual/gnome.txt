@@ -4,7 +4,7 @@
 ## Custom
 gnome-system-monitor = Ctrl + Alt + Esc
 
-# Themes/Icons
+# GTK Themes/Icons
 ## Paper
 sudo add-apt-repository ppa:snwh/pulp
 sudo apt-get update
@@ -15,6 +15,10 @@ sudo apt-get install paper-cursor-theme
 sudo add-apt-repository ppa:numix/ppa
 sudo apt-get install numix-gtk-theme
 sudo apt-get install numix-icon-theme-circle
+
+# Shell Themes
+## Zuki Themes
+https://github.com/lassekongo83/zuki-themes
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -53,11 +57,23 @@ sudo apt-get update
 sudo apt-get install caffeine
 
 # Tweaks
+set Zuki Themes
 
 # Extensions
+Alternatetab
+Removable drive menu
+User Theme
+Dash to Dock
+  bottom
+  intelligent hide
+    Dodge Windows = All Windows
+    Pressure threshold = 0
+TopIcons Plus
+
 
 # Startup
 caffeine-indicator
 
 ### Configuration ###
+Make storages mount on start on disks app
 PlayonLinux's games configuration is up to you
