@@ -59,6 +59,9 @@ sudo apt-get install caffeine
 # Tweaks
 set Zuki Themes
 Global Dark Theme = true
+Windows
+  Maximize = true
+  Minimize = true
 
 # Extensions
 Alternatetab
@@ -69,7 +72,9 @@ Dash to Dock
   intelligent hide
     Dodge Windows = All Windows
     Pressure threshold = 0
+  Move the application button at the beginning of the dock = true
 TopIcons Plus
+gTile
 
 # Startup
 caffeine-indicator
